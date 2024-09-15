@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .amenities-section {
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        /* Flexbox for horizontal scrolling */
+        .amenities-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: slide 15s linear infinite;
+            width: calc(160px * 7); /* Total width for 7 icons */
+        }
+
+        /* Individual amenities styling */
+        .amenity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 160px;
+            text-align: center;
+            padding: 10px;
+        }
+        .amenity i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        /* Sliding animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-1120px); /* Slide width for 7 icons */
+            }
+        }
+
+        /* Special styles for Single Rooms (amenities that are excluded) */
+        .single-room .free-parking, 
+        .single-room .free-gym {
+            display: none;
+        }
+        
+        /* Making sure scrolling happens smoothly */
+        .amenities-wrapper:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+
+<div class="amenities-section">
+    <div class="amenities-wrapper">
+        <div class="amenity free-wifi">
+            <i class="fas fa-wifi"></i>
+            <p>Free WiFi</p>
+        </div>
+        <div class="amenity free-parking">
+            <i class="fas fa-parking"></i>
+            <p>Free Parking</p>
+        </div>
+        <div class="amenity onsite-laundry">
+            <i class="fas fa-tshirt"></i>
+            <p>Onsite Laundry @150</p>
+        </div>
+        <div class="amenity free-gym">
+            <i class="fas fa-dumbbell"></i>
+            <p>Free Gym</p>
+        </div>
+        <div class="amenity swimming-pool">
+            <i class="fas fa-swimmer"></i>
+            <p>Swimming Pool</p>
+        </div>
+        <div class="amenity elevator-access">
+            <i class="fas fa-elevator"></i>
+            <p>Elevator Access</p>
+        </div>
+        <div class="amenity free-water">
+            <i class="fas fa-water"></i>
+            <p>Free Water</p>
+        </div>
+        <div class="amenity community-theatre">
+            <i class="fas fa-theater-masks"></i>
+            <p>Community Theatre</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
