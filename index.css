@@ -1,36 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+ 
+*{ text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  font-family:"Merriweather", serif;
+  font-size: 1.6rem;
+}
+.html {
+  font-size: 72.5%;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --color-secodary:#3b5d50;
+  --color-primary:#ffffff;
+  --color-primary-dark:#c9c9c9;
+  --color-mustard:#f9bf29;
+}
+/*
+header stylings
+*/
+.header {
+  background-color: #3b5d50;
+  width: 100%;
+  height:10%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1 rem;
+  align-items: center;
+  font-size: 10px;
+}
+.logo{
+  border-radius: 50%;
+   max-width: 10rem;
+   height: auto;
+   width: auto;
+   font-size: 20px;
+   
+}
+.nav-list{
+    list-style: none;
+    display:flex ;
+    gap: 5rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+.nav-list-link{
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    text-transform: capitalize;
+    color:rgb(255, 255, 255) ;
+
+   
+}
+.nav-list-link:hover{
+  color:var(--color-mustard);
 
 }
-.body{
-    font-family: "Sawarabi Mincho", serif;
-    font-size: 2rem;
+.hero{
+  background-color:var(--color-secodary);
+  display: flex;
+  justify-content: flex-end;
+  
+  
 }
-html{
-    font-size: 90%;
-    padding: 0;
-    margin:0 ;
-
-}.header{
-    background-color: #3b5d50;
-    padding: 1%;
-    display: block;
-    justify-content: space-between;
+.hero-image{
+  border-top-left-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
+  width: 70rem;
+  height: 46rem;
+}
+.h1{
+  color:var(--color-primary);
+  font-size: 55px;
+  display: flex;
+  justify-content: right;
 
 }
-.nav-list a{
-    display: flex;
-    gap: 7 rem;
-    flex: auto;
-    padding: 8px 17px;
-    text-decoration: none;
-    color: beige;
-}.nav-list{
-    display: flex;
+.h2{
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+.hero-text{
+  padding: 100px;
+}
+.button{
+  padding: 30px;
+  border-radius: 20%;
+  background-color: #f9bf29;
+}
+.button:hover{
+  color: var(--color-primary);
+}
+/*room section*/
+.rooms-container{
+  padding-inline: 2rem;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  
+  
+}
+.room-card-image{
+  width: 100%;
+  height: 16rem;
+ 
+  
+}
+.rooms-card{
+  width: 19rem;
+  border: 1px;
+  background-color: var(--color-primary-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  
+  
+}
+.rooms-card-details{
+  background-color: var(--color-primary-dark);
+  padding:1rem;
+}
+.rooms-card-title{
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.rooms-card-description{
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.rooms-card-action{
+  display: flex;
+  justify-content: space-between;
+}
+.room-item-cta{
+  border: none;
+  outline: none;
+  background-color: var(--color-mustard);
+  color:var(--color-secodary);
+  text-transform:capitalize;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: .2rem;
+  cursor:pointer;
 
-    gap: 2px;
+}
+.room-item-price{
+  align-items: centre;
+  text-transform: capitalize;
 }
